@@ -17,9 +17,9 @@ const Header = () => {
             if ( user) { 
                 setUser(user);
                 history('/home');
-            } else if (!user) { 
+            }/*  else if (!user) { 
                 history("/");
-            }
+            } */
         })
     }, [userName])
 
@@ -37,6 +37,8 @@ const Header = () => {
         } else if ( userName){ 
             auth.signOut().then(()=> { 
                 dispatch(signOutState())
+            }).catch((error) =>{ 
+                alert("Something went Wrong!", error.message)
             })
         }
         
