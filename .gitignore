@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+// my files
+disney-clone-firebas
+src/components/firebase.js
 
 # Editor directories and files
 .vscode/*
